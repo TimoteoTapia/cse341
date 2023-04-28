@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "toño",
+    "lastName": "Guzman",
+    "email": "jorgeguz12@gmail.com",
+    "favoriteColor": "red",
+    "birthday": "05/04/94"
+  },
+  {
+    "firstName": "lolo",
+    "lastName": "Zarate",
+    "email": "arturitotte@gmail.com",
+    "favoriteColor": "red",
+    "birthday": "04/07/05"
+  },
+  {
+    "firstName": "tomo",
+    "lastName": "Lozano",
+    "email": "lozadda@gmail.com",
+    "favoriteColor": "white",
+    "birthday": "02/12/92"
+  }
+]
