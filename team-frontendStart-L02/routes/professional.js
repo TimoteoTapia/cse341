@@ -1,6 +1,6 @@
 const express = require('express');
 
-const professionalController = require('../controllers/professional');
+const professionalController = require('../controllers/professional');//withoutdatabse if I want to use just JSON
 
 const router = express.Router();
 
