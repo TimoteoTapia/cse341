@@ -12,7 +12,8 @@
     "format2": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "lint2": "eslint *.js src/**/*.js",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "fixall": "lint -- --fix"
+    "fixall": "lint -- --fix",
+    "swagger": "node ./swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,8 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^5.3.0"
+    "mongodb": "^5.3.0",
+    "swagger-ui-express": "^4.6.3"
   },
   "devDependencies": {
     "eslint": "^8.39.0",
@@ -31,6 +33,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "nodemon": "^2.0.22",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "swagger-autogen": "^2.23.1"
   }
 }
