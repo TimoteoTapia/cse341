@@ -1,0 +1,29 @@
+[
+  {
+    "firstName": "Pedro",
+    "lastName": "Juarez",
+    "email": "sjlfn@gmail.com",
+    "phone": 5545213625,
+    "notification": "yes",
+    "membership": "no",
+    "state": "chiapas"
+  },
+  {
+    "firstName": "Toño",
+    "lastName": "Dominguez",
+    "email": "eeeec@gmail.com",
+    "phone": 5545856321,
+    "notification": "yes",
+    "membership": "no",
+    "state": "veracruz"
+  },
+  {
+    "firstName": "Julia",
+    "lastName": "Gimenez",
+    "email": "fffg@gmail.com",
+    "phone": 5545853254,
+    "notification": "yes",
+    "membership": "no",
+    "state": "Durango"
+  }
+]
