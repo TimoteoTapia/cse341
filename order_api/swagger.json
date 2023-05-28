@@ -16,6 +16,10 @@
     {
       "name": "Orders",
       "description": ""
+    },
+    {
+      "name": "Not Yet Implemented",
+      "description": ""
     }
   ],
   "paths": {
@@ -28,6 +32,7 @@
     },
     "/order/": {
       "get": {
+        "tags": ["Orders"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [],
@@ -38,11 +43,11 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "tags": ["Orders"]
+        }
       },
       "post": {
-        "description": "",
+        "tags": ["Orders"],
+        "description": "Create a new order",
         "parameters": [
           {
             "name": "body",
@@ -51,40 +56,56 @@
               "type": "object",
               "properties": {
                 "product": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The name of the product",
+                  "example": "Example Product"
                 },
                 "price": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The price of the product",
+                  "example": 10.99
                 },
                 "quantity": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The quantity of the product",
+                  "example": 1
                 },
-                "shipment": {
-                  "example": "any"
+                "shippingMethod": {
+                  "type": "string",
+                  "enum": ["express", "pickup"],
+                  "description": "The shipping method",
+                  "example": "express or pickup"
                 },
                 "color": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The color of the product"
                 },
-                "weight": {
-                  "example": "any"
+                "additionalNotes": {
+                  "type": "string",
+                  "description": "Additional notes"
                 },
                 "discount": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The discount amount"
                 }
-              }
+              },
+              "required": ["product", "price", "quantity", "shippingMethod"]
             }
           }
         ],
         "responses": {
           "201": {
             "description": "the order was found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
-        },
-        "tags": ["Orders"]
+        }
       }
     },
     "/order/{id}": {
       "get": {
+        "tags": ["Orders"],
         "description": "",
         "produces": ["application/json"],
         "parameters": [
@@ -102,10 +123,10 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "tags": ["Orders"]
+        }
       },
       "put": {
+        "tags": ["Orders"],
         "description": "",
         "parameters": [
           {
@@ -121,33 +142,54 @@
               "type": "object",
               "properties": {
                 "product": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The name of the product",
+                  "example": "Example Product"
                 },
                 "price": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The price of the product",
+                  "example": 10.99
                 },
                 "quantity": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The quantity of the product",
+                  "example": 1
                 },
-                "shipment": {
-                  "example": "any"
+                "shippingMethod": {
+                  "type": "string",
+                  "enum": ["express", "pickup"],
+                  "description": "The shipping method",
+                  "example": "express or pickup"
                 },
                 "color": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The color of the product"
                 },
-                "weight": {
-                  "example": "any"
+                "additionalNotes": {
+                  "type": "string",
+                  "description": "Additional notes"
                 },
                 "discount": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The discount amount"
                 }
-              }
+              },
+              "required": ["product", "price", "quantity", "shippingMethod"]
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "204": {
+            "description": "ok"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       },
       "delete": {
+        "tags": ["Orders"],
         "description": "",
         "parameters": [
           {
@@ -157,11 +199,19 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "204": {
+            "description": "ok"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/user/": {
       "get": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [],
         "responses": {
@@ -171,11 +221,11 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "tags": ["Users"]
+        }
       },
       "post": {
-        "description": "",
+        "tags": ["Users"],
+        "description": "create new user",
         "parameters": [
           {
             "name": "body",
@@ -183,28 +233,39 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
+                "username": {
+                  "type": "string",
+                  "maxLength": 8,
+                  "description": "The username",
+                  "example": "example"
                 },
-                "lastName": {
-                  "example": "any"
+                "password": {
+                  "type": "string",
+                  "description": "The password",
+                  "example": "password"
                 },
                 "email": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The email",
+                  "example": "example@example.com"
                 },
                 "phone": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The phone number"
+                },
+                "age": {
+                  "type": "number",
+                  "minimum": 18,
+                  "maximum": 90,
+                  "description": "The age"
                 },
                 "notification": {
-                  "example": "any"
-                },
-                "membership": {
-                  "example": "any"
-                },
-                "state": {
-                  "example": "any"
+                  "type": "string",
+                  "enum": ["yes", "no"],
+                  "description": "Notification preference"
                 }
-              }
+              },
+              "required": ["username", "password", "email"]
             }
           }
         ],
@@ -215,16 +276,16 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "tags": ["Users"]
+        }
       }
     },
-    "/user/{id}": {
+    "/user/{username}": {
       "get": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"
@@ -237,14 +298,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "tags": ["Users"]
+        }
       },
       "put": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"
@@ -255,19 +316,39 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
+                "username": {
+                  "type": "string",
+                  "maxLength": 8,
+                  "description": "The username",
+                  "example": "example"
                 },
                 "password": {
-                  "example": "any"
+                  "type": "string",
+                  "description": "The password",
+                  "example": "password"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "The email",
+                  "example": "example@example.com"
                 },
                 "phone": {
-                  "example": "any"
+                  "type": "number",
+                  "description": "The phone number"
+                },
+                "age": {
+                  "type": "number",
+                  "minimum": 18,
+                  "maximum": 90,
+                  "description": "The age"
+                },
+                "notification": {
+                  "type": "string",
+                  "enum": ["yes", "no"],
+                  "description": "Notification preference"
                 }
-              }
+              },
+              "required": ["username", "password", "email"]
             }
           }
         ],
@@ -281,10 +362,11 @@
         }
       },
       "delete": {
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "username",
             "in": "path",
             "required": true,
             "type": "string"

@@ -1,5 +1,66 @@
 // LOCALHOST 
 GET http://localhost:8080/order
 ### 
-GET http://localhost:8080/order/6451cf0284f0c6e408f1c29e 
+GET http://localhost:8080/order/646d5837c9456e25309095ea 
 ### 
+POST http://localhost:8080/order HTTP/1.1 
+content-type: application/json
+
+{
+    "product": "nanita",
+    "price": 252,
+    "quantity": 1,
+    "shippingMethod": "express",
+    "color": "red",
+    "additionalNotes": "",
+    "discount": 0
+  }
+### 
+PUT http://localhost:8080/order/646ea775f2ad9fff0236ee3b HTTP/1.1 
+content-type: application/json
+
+  {
+    "product": "nani",
+    "price": 252,
+    "quantity": 1,
+    "shipping method": "express",
+    "color": "red",
+    "additionalNotes": "test",
+    "discount": 0
+  }
+###
+DELETE http://localhost:8080/order/646ea5a8a200e5d862146e26 HTTP/1.1 
+###
+
+
+//User
+GET http://localhost:8080/user
+### 
+GET http://localhost:8080/user/elencus
+### 
+POST http://localhost:8080/user HTTP/1.1 
+content-type: application/json
+
+{
+    "username": "tomias",
+    "password": "sdlfn23S@w",
+    "email": "eww@gmail.com",
+    "phone": 5545856321,
+    "age": 52,
+    "notification": "yes"
+}
+### 
+PUT http://localhost:8080/user/tomias HTTP/1.1 
+content-type: application/json
+
+{
+  "username": "change",
+  "password": "sdlfn23Sw@",
+  "email": "eecdaffffffs@gmail.com",
+  "phone": 554585632134,
+  "age": 25,
+  "notification": "yes"
+}
+###
+DELETE http://localhost:8080/user/tomias HTTP/1.1 
+###

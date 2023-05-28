@@ -5,6 +5,9 @@ const mongodb = require('./database/connect');
 const port = process.env.Port || 8080;
 const app = express();
 
+// Middleware setup
+// app.use(express.json()); it is the same as .use(bodyParser.json()) without requiring bodyParser
+
 app
   .use(bodyParser.json())
   .use((req, res, next) => {

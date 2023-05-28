@@ -1,29 +1,26 @@
 [
   {
-    "firstName": "Pedro",
-    "lastName": "Juarez",
+    "username": "tomias",
+    "password": "Sw3sslfm",
     "email": "sjlfn@gmail.com",
     "phone": 5545213625,
-    "notification": "yes",
-    "membership": "no",
-    "state": "chiapas"
+    "age": 25,
+    "notification": "yes"
   },
   {
-    "firstName": "Toño",
-    "lastName": "Dominguez",
+    "username": "elencus",
+    "password": "sdlfn23Sw",
     "email": "eeeec@gmail.com",
     "phone": 5545856321,
-    "notification": "yes",
-    "membership": "no",
-    "state": "veracruz"
+    "age": 52,
+    "notification": "yes"
   },
   {
-    "firstName": "Julia",
-    "lastName": "Gimenez",
+    "username": "vicenio",
+    "password": "xvnd223SS",
     "email": "fffg@gmail.com",
     "phone": 5545853254,
-    "notification": "yes",
-    "membership": "no",
-    "state": "Durango"
+    "age": 18,
+    "notification": "yes"
   }
 ]

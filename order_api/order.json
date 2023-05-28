@@ -1,0 +1,29 @@
+[
+  {
+    "product": "iron",
+    "price": 252,
+    "quantity": 1,
+    "shipping method": "express",
+    "color": "red",
+    "additional notes": "",
+    "discount": 0
+  },
+  {
+    "product": "iron",
+    "price": 252,
+    "quantity": 2,
+    "shipping method": "pickup",
+    "color": "white",
+    "additional notes": "",
+    "discount": 0
+  },
+  {
+    "product": "fridge",
+    "price": 2000,
+    "quantity": 1,
+    "shipping method": "04/05/23",
+    "color": "",
+    "additional notes": "phone 5542369545",
+    "discount": 10
+  }
+]
