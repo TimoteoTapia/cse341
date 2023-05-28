@@ -5,9 +5,9 @@
     "description": "Order and user",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "order-api-06ih.onrender.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "tags": [
     {
       "name": "Users",
