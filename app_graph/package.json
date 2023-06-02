@@ -1,0 +1,17 @@
+{
+  "name": "app_graph",
+  "version": "1.0.0",
+  "description": "Stept to folllow to install node.js express and use an API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "typescript": "^5.1.3"
+  }
+}
