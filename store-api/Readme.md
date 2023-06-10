@@ -10,6 +10,4 @@ npm i jsonwebtoken
 
 npm i apollo-server
 
-tsc --init
-
-
+tsc -init

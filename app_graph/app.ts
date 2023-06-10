@@ -1,3 +1,17 @@
+/* Oauth */
+import passport, { Profile } from 'passport';
+import session from 'express-session';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import express, { Express, NextFunction, Request, Response } from 'express';
+import { router } from './src/routes';
+import { initDB } from './src/config/db.config';
+import { startApollo } from './src/config/apollo.config';
+import dotenv from 'dotenv';
+import { middlewarePassport } from './src/config/oauth.config';
+dotenv.config();
+
 /* Globals Interfaces */
 interface SessionUser {
   name?: string;
@@ -32,7 +46,10 @@ app
   .use(bodyParser.json())
   .use(
     cors({
-      origin: ['https://studio.apollographql.com' /* Add Render URL */],
+      origin: [
+        'https://studio.apollographql.com',
+        'https://project-graph.onrender.com' /* Add Render URL */
+      ],
       credentials: true
     })
   )

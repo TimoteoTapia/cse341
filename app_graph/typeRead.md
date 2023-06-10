@@ -34,3 +34,25 @@ si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtel
 
 create the file for typescript
 -tsc -init
+
+npm i apollo-server-express bcrypt body-parser cors dotenv express-session graphql graphql-tools joi mongoose mongodb passport passport-google-oauth20 typescript react
+
+npm i -D @types/bcrypt @types/joi @types/react @types/jest eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react jest nodemon ts-jest ts-node
+
+npm i --save-dev @types/express-session
+
+npm i -D @types/passport-google-oauth20
+
+npm i jsonwebtoken
+
+npm i apollo-server
+
+npm install cookie-parser
+npm install --save-dev @types/cookie-parser
+
+Change the script "start" with nodemon command.
+"start": "nodemon server.js"
+
+Create the ".env" file in the root(where your package.json file is)
+
+Create .prettierrc & .eslint file

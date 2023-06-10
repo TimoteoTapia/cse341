@@ -88,15 +88,13 @@ module.exports = {
 
 Install this libraries:
 -npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier
+
 Note: It is optional
 -npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
 Note: -D is dev dependecies
 
 No es necesario
 -npx install-peerdeps --dev eslint-config-airbnb
-
-No es necesario
--npm i -g eslint
 
 Create .prettierrc file
 
