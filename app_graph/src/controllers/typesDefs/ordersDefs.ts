@@ -1,41 +1,46 @@
 import { gql } from 'apollo-server-express';
 
 const orderTypesDefs = gql`
-  enum OrderStatus {
-    pending
-    delivered
-    canceled
+  enum ShippingMethod {
+    express
+    pickup
   }
 
   type Order {
     _id: ID
-    orderName: String
-    orderUserId: ID
-    dateOrder: String
-    dateShipping: String
-    orderStatus: OrderStatus
+    product: String
+    price: Float
+    quantity: Int
+    shippingMethod: ShippingMethod
+    color: String
+    additionalNotes: String
+    discount: Int
   }
 
   type Query {
     getAllOrder: [Order]!
     getOrderById(_id: ID!): [Order!]!
-    getOrderByStatus(orderStatus: OrderStatus!): [Order!]!
+    getOrderByStatus(shippingMethod: ShippingMethod!): [Order!]!
   }
 
   input CreateNewOrderInput {
-    orderName: String!
-    orderUserId: ID!
-    dateOrder: String!
-    dateShipping: String!
-    orderStatus: OrderStatus!
+    product: String!
+    price: Float!
+    quantity: Int!
+    shippingMethod: ShippingMethod!
+    color: String
+    additionalNotes: String
+    discount: Int
   }
 
   input UpdateOrderInput {
-    orderName: String
-    orderUserId: ID
-    dateOrder: String
-    dateShipping: String
-    orderStatus: OrderStatus
+    product: String!
+    price: Float!
+    quantity: Int!
+    shippingMethod: ShippingMethod!
+    color: String
+    additionalNotes: String
+    discount: Int
   }
 
   type Mutation {

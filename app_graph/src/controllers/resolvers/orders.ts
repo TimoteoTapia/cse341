@@ -1,4 +1,4 @@
-import Order, { IOrder, OrderStatus } from '../../models/orders';
+import Order, { IOrder, ShippingMethod } from '../../models/orders';
 import { AuthenticationError } from 'apollo-server';
 import { ObjectId } from 'mongodb';
 
@@ -29,14 +29,14 @@ const resolversOrders = {
     },
     getOrderByStatus: async (
       _: any,
-      args: { orderStatus: OrderStatus },
+      args: { shippingMethod: ShippingMethod },
       context: any
     ): Promise<IOrder[]> => {
       if (!context.isAuthenticated) {
         throw new AuthenticationError('User not authenticate');
       }
       try {
-        const orders: IOrder[] = await Order.find({ orderStatus: args.orderStatus });
+        const orders: IOrder[] = await Order.find({ shippingMethod: args.shippingMethod });
         return orders;
       } catch (err) {
         throw err;
@@ -48,11 +48,13 @@ const resolversOrders = {
       _: any,
       args: {
         orders: {
-          orderName: string;
-          orderUserId: ObjectId;
-          dateOrder: string;
-          dateShipping: string;
-          orderStatus: OrderStatus;
+          product: string;
+          price: number;
+          quantity: number;
+          shippingMethod: ShippingMethod;
+          color: string;
+          additionalNotes: string;
+          discount: number;
         };
       },
       context: any
@@ -73,11 +75,13 @@ const resolversOrders = {
       args: {
         _id: string;
         orders: {
-          orderName: string;
-          orderUserId: ObjectId;
-          dateOrder: string;
-          dateShipping: string;
-          orderStatus: OrderStatus;
+          product: string;
+          price: number;
+          quantity: number;
+          shippingMethod: ShippingMethod;
+          color: string;
+          additionalNotes: string;
+          discount: number;
         };
       },
       context: any
