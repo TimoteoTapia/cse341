@@ -237,3 +237,7 @@ For instance: http://localhost:8080/api-docs
 
 EXTENSIONS: eslint, prettier, rest client, thunder client,
 mongodb,
+
+npm install joi-password-complexity
+
+npm install --save-dev @types/joi-password-complexity

@@ -39,7 +39,7 @@ export const startApollo = async (app: Express) => {
         origin: [
           'https://studio.apollographql.com',
           'https://project-graph.onrender.com'
-          /* Add Render URL */
+          /* Add Render URL, delete the render URL to test on local */
         ],
         credentials: true
       }

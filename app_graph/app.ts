@@ -48,7 +48,7 @@ app
     cors({
       origin: [
         'https://studio.apollographql.com',
-        'https://project-graph.onrender.com' /* Add Render URL */
+        'https://project-graph.onrender.com' /* delete the render URL to test in local */
       ],
       credentials: true
     })

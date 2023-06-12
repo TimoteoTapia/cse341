@@ -56,3 +56,9 @@ Change the script "start" with nodemon command.
 Create the ".env" file in the root(where your package.json file is)
 
 Create .prettierrc & .eslint file
+
+https://console.cloud.google.com/apis/dashboard
+
+npm install joi-password-complexity
+
+npm install --save-dev @types/joi-password-complexity
